@@ -1,4 +1,7 @@
 <?php
+//@author Kwabena Aboagye-Otchere
+//The header locations might be incorrect
+//Front end required
 session_start();
 require('../classes/personclass.php');
 
@@ -6,9 +9,12 @@ require('../classes/personclass.php');
 function loginctrl($a, $b){
 	$checkforperson = new personClass;
 	$check = $checkforperson->login($a, $b);
-	if(mysqli_num_rows($check) > 0){
-		$row = mysqli_fetch_assoc($result);
-		$_SESSION['user_info'] = $row;
+	if($check != false){
+		$_SESSION['user_info'] = $check;
+		header('../index.php');
+	} else{
+		//echo "login failed" maybe?
+		header('../view/login.php');
 	}
 }
 
