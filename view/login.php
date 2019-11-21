@@ -9,15 +9,18 @@
   <meta name="author" content="">
 
   <title>Shop Homepage - FloMaBek</title>
-  <link href="image/icon.png" rel="icon">
+  <link href="icon.png" rel="icon">
 
   <!-- Bootstrap core CSS -->
-  <link href="view/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="view/css/shop-homepage.css" rel="stylesheet">
+  <link href="css/shop-homepage.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">s
+
+  <!--Link the project.js file-->
+  <script type="text/javascript" src="project.js"></script>
 
 </head>
 
@@ -26,7 +29,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/icon.png" style="height: 50px; width: 120px;"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="icon.png" style="height: 50px; width: 120px;"></a>
        
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,106 +42,42 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="view/login.php">Log In</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="view/sign_up.php">Sign Up</a>
-          </li>
-
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <div class="container">
+  
 
-    <div class="row">
-
-      <div class="col-lg-3">
-
-        <h1 class="my-4"> FLOMABEK</h1>
-        <div class="list-group">
-          <a href="view/laptops_loggedOut.php" class="list-group-item">Laptops</a>
-          <a href="view/phones_loggedOut.php" class="list-group-item">Phones</a>
-          <a href="view/accessories_loggedOut.php" class="list-group-item">Accessories</a>
-        </div>
-
-      </div>
-      <!-- /.col-lg-3 -->
-
-      <div class="col-lg-9">
-
-        <!-- carousel -->
-        <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid" src="images/laptop_img/mac.jpg" alt="First slide">
-              <div class="carousel-caption d-none d-md-block">
-              <h5>Hottest Devices!</h5>
-              <p>Find New Releases here.</p>
-            </div>
-          </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="images/phones_img/s8.jpg" alt="Second slide">
-              <div class="carousel-caption d-none d-md-block">
-              <h5>Hottest Devices!</h5>
-              <p>Find New Releases here.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid" src="images/accessories_img/beats.jpg" alt="Third slide">
-              <div class="carousel-caption d-none d-md-block">
-              <h5>Hottest Devices!</h5>
-              <p>Find New Releases here.</p>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class=" carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-
-        <!--about us-->
-        <div>
-          <p class="h1">About us</p>
-          <p>The company was established in 2019 by a couple of Ashesi students. Their realization of the difficulty in buying the latest tech goods due to currency fluctuation, low income and high cost of living in the capital, led to the establishment of the business. The primary purpose of the company is to develop very affordable payment plans for the latest technology to fit the budgets of the youth and working class in Accra to improve general modern technology proficiency in Accra.</p>
-        </div>
-
-
-        <!--Meet the team-->
-        <div>
-          <p class="h1">Meet the Team!</p>
-          <p>We are a small team of talented professionals with a wide range of skills and experience. We love what we do, and we do it with passion. We look forward to working with you.</p>
-        </div>
-
-
-
-
-        <!-- /.row -->
-
-      </div>
-      <!-- /.col-lg-9 -->
-
+  
+  <!--Login Form-->
+  <div class="col-md-6 ml-4 mt-4 mb-4">
+    <div>
+      <p class=" h1 lr_label">Login</p>
     </div>
-    <!-- /.row -->
 
+    <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input required="true" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input required="true" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <div>
+      <p>
+        <small>
+        Don't have an account?
+        </small>
+        <a href="sign_up.html">Create one here</a>
+      </p>
+    </div>
+
+  </form>
   </div>
-  <!-- /.container -->
+
 
   <!-- Footer -->
   <footer class="py-5 bg-custom">
@@ -259,3 +198,13 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
