@@ -7,14 +7,12 @@ require('../classes/personclass.php');
 function getLaptop($a, $b, $c, $d){
 	$person = new personClass;
 	$result = $person->selectLaptop($a, $b, $c, $d);
-	if($result != false){
+	if($result){
 		return $result;
+	} else{
+		//Let user know its unavailable
 	}
 }
 
-//Used to calculate installment value
-function getCost($cost, $rate){
-	$installment = $cost * ((0.3 * ((1+0..3)**($rate)))/(((1+0..3)**($rate - 1)))); 
-	return $installment;
-}
+
 ?>

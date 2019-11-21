@@ -7,23 +7,29 @@ $kwabena = new personclass;
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo $time;
+echo "<br>";
 
 $time_start = microtime(true);
 $kwabena->register("kwabena.aboagye@ashesi.edu.gh", "0243463643", "ab", "abc");
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo $time;
+echo "<br>";
+
 
 $time_start = microtime(true);
 $a = $kwabena->login("kwabena.aboagye@ashesi.edu.gh", "ab");
-echo $a;
+echo $a['EMAIL'];
+echo "<br>";
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo $time;
+echo "<br>";
+
 
 $time_start = microtime(true);
 $b = $kwabena->selectItem("iphone6s");
-echo $b;
+echo $b['LABEL'];
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo $time;
@@ -36,9 +42,10 @@ $time = $time_end - $time_start;
 echo $time;
 
 $time_start = microtime(true);
-$kwabena->purchase(1, "XYZ");
+$kwabena->purchase($a['USERID'], "XYZ");
 $time_end = microtime(true);
 $time = $time_end - $time_start;
 echo $time;
+
 
 ?>

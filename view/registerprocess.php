@@ -13,7 +13,26 @@ if(isset($_GET['useradd'])){
 
 
 	//Call function to register user
-	registerctrl($pemail, $pphone, $ppass, $paddress);
+	if(emailisvalid){
+		if(phonenumisvalid){
+			sanitizeemail
+			sanitizephonenumb
+			sanitizeaddress
+			sanitizepass
+			if(registerctrl($pemail, $pphone, $ppass, $paddress)){
+				//direct to login page
+			}else{
+				//prompt user registration failed and redirect to registration page again
+			}
+
+		}else{
+			//phonenumber was invalid
+		}
+	} else{
+		//prompt user email is invald
+	}
+
+	
 	
 }
 
