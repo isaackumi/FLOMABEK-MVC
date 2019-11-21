@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="images/icon.png" style="height: 50px; width: 120px;"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/icon.png" style="height: 50px; width: 120px;"></a>
        
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +89,7 @@
           <label><input type="radio" name="optradio">15 inches</label>
         </div>
       </tr>
-      
+
     </table>
     <div>
       <h4>  Price: GHS3400.00</h4>

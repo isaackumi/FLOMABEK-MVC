@@ -40,8 +40,13 @@
             </a>
           </li>
         
+        <div class="form-group">
+        <label for="exampleInputUname">Search</label>
+        <input type="text" placeholder="Search">
+      </div>
+
         <div>
-        <h2>Your Orders</h2>
+          
         </div>
 
         </ul>
