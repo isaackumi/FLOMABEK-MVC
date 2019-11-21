@@ -9,13 +9,13 @@
   <meta name="author" content="">
 
   <title>Laptops - FloMaBek</title>
-  <link href="image/icon.png" rel="icon">
+  <link href="../images/icon.png" rel="icon">
 
   <!-- Bootstrap core CSS -->
-  <link href="view/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="view/css/shop-homepage.css" rel="stylesheet">
+  <link href="css/shop-homepage.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -26,7 +26,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="icon.png" style="height: 50px; width: 120px;"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="../images/icon.png" style="height: 50px; width: 120px;"></a>
        
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
