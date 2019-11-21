@@ -13,6 +13,14 @@
 
   <!-- Bootstrap core CSS -->
   <link href="view/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- bootstrap css cdn -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+  <!-- bootstrap js cdn -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
 
   <!-- Custom styles for this template -->
   <link href="view/css/shop-homepage.css" rel="stylesheet">
@@ -22,6 +30,40 @@
 </head>
 
 <body>
+
+<!-- LOGIN MODAL ---->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Login Here</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="email" id="form3" class="form-control validate" name="email">
+          <label data-error="wrong" data-success="right" for="form3">Your Email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="password" id="form2" class="form-control validate" name="password">
+          <label data-error="wrong" data-success="right" for="form2">Your Password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button name='loginBtn' class="btn btn-success">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
@@ -35,17 +77,17 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html"><i class="fa fa-fw fa-home"></i>Home
+            <a class="nav-link" href="index.php"><i class="fa fa-fw fa-home"></i>Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="view/login.php">Log In</a>
+            <button class="nav-link " href='#'  data-toggle="modal" data-target="#loginModal">Log In</button>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="view/sign_up.php">Sign Up</a>
+            <button class="nav-link " name="signBtn" href='#'  data-toggle="modal" data-target="#registrationModal">Sign Up</button>
           </li>
 
         </ul>
@@ -251,6 +293,56 @@
     </div>
     <!-- /.container -->
   </footer>
+
+
+<!-- MODAL -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="email" id="orangeForm-name" class="form-control validate" name="email">
+          <label data-error="wrong" data-success="right" for="orangeForm-name">Your Email</label>
+        </div>
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="tel" id="orangeForm-email" class="form-control validate" name="phoneNumber">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Phone Number</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="text" id="orangeForm-email" class="form-control validate" name="address">
+          <label data-error="wrong" data-success="right" for="orangeForm-email">Address</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate" name="password">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Your password</label>
+        </div>
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate" name="password2">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Re-Enter password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-deep-orange">Sign up</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
