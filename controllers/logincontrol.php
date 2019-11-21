@@ -9,12 +9,14 @@ require('../classes/personclass.php');
 function loginctrl($a, $b){
 	$checkforperson = new personClass;
 	$check = $checkforperson->login($a, $b);
-	if($check != false){
+	if($check){
+		//Initialize session in index file and set user info to null
+		$_SESSION['user_info'] = NULL;
+		
+		//stores all customer detail in the session
+		//to call specific attribute, for example email, you do $_SESSION['user_info']['USERID'];
 		$_SESSION['user_info'] = $check;
-		header('../index.php');
-	} else{
-		//echo "login failed" maybe?
-		header('../view/login.php');
+		
 	}
 }
 
